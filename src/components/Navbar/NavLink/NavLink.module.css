@@ -1,0 +1,6 @@
+.active {
+    border: none;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+}

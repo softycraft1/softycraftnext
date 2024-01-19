@@ -40,14 +40,14 @@ function NavLink() {
     },
   ];
   return (
-    <div>
+    <div className="font-semibold">
       {links.map((link) => (
         <Link
           key={link.id}
           href={link.url}
           className={`${
-            pathname === link.title && style.active
-          } w-8 h-8 p-4 hover:border-2 hover:border-none hover:rounded-[25px] hover:bg-[#F8B90C] hover:drop-shadow-md`}
+            pathname === link.url && style.active
+          } w-8 h-8 p-2 px-4 hover:border-2 hover:border-none hover:rounded-[10px] hover:bg-[#f8b90c7a] hover:drop-shadow-md`}
         >
           {link.title}
         </Link>
