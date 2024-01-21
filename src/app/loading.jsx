@@ -2,10 +2,10 @@ import React from "react";
 
 function loading() {
   return (
-    <div>
-      <h1 className="text-4xl text-blue-300 bg-slate-500">
-        loading.......................
-      </h1>
+    <div className="h-[70vh]">
+      <div className="my-[25vh]">
+        <h1 className="text-3xl animate-ping">loading ...</h1>
+      </div>
     </div>
   );
 }

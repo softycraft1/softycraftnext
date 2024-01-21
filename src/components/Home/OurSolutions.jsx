@@ -1,8 +1,8 @@
 export default function OurSolutions() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center p-10">
       <div>
-        <h1 className="text-4xl">Our Solutions</h1>
+        <h1 className="text-4xl m-6">Our Solutions</h1>
       </div>
       <div>
         <p>
@@ -10,12 +10,11 @@ export default function OurSolutions() {
           Find out your one and level up your success stairs.
         </p>
       </div>
-      <div className="flex flex-row gap-5">
-        <div>Business</div>
-        <div>BlockChain</div>
-        <div>Hospitality</div>
-        <div>E-commerce</div>
-        <div>Healthcare</div>
+      <div className="flex flex-row gap-5 m-5">
+        <button className="btn1">Business</button>
+        <button className="btn1">Hospitality</button>
+        <button className="btn1">E-commerce</button>
+        <button className="btn1">Healthcare</button>
       </div>
       <div>
         <div className="flex flex-row gap-2">
