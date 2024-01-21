@@ -46,22 +46,68 @@ const data = [
   },
 
   {
-    type: "Business",
+    type: "Hospitality",
     title: "Bhojon",
     desc: "Restaurant Management Software with Restaurant Website",
   },
   {
-    type: "Business",
+    type: "Hospitality",
     title: "Cloud Kitchen",
     desc: "Kitchen Management Software",
   },
   {
-    type: "Business",
+    type: "Hospitality",
     title: "Xain",
     desc: "Restaurant Management Software with Restaurant WebsiteHotel Management System & Booking Software",
+  },
+  {
+    type: "E-Commerce",
+    title: "Isshue",
+    desc: "Multi Store eCommerce Shopping Cart Solution",
+  },
+  {
+    type: "E-Commerce",
+    title: "Storefex",
+    desc: "Multi Vendor Marketplace Platform",
+  },
+  {
+    type: "Healthcare",
+    title: "Hospital Automanager",
+    desc: "Advance Hospital Management System Software",
+  },
+  {
+    type: "Healthcare",
+    title: "Hospital",
+    desc: "Hospital Management System with Website",
+  },
+  {
+    type: "Healthcare",
+    title: "Pharmacare",
+    desc: "Pharmacy Software Made Easy",
+  },
+  {
+    type: "Healthcare",
+    title: "Multi-Hospital",
+    desc: "Best Hospital Management System (SaaS App)",
+  },
+  {
+    type: "Healthcare",
+    title: "Clinic365",
+    desc: "Clinic Management System",
+  },
+  {
+    type: "Healthcare",
+    title: "Doctorss",
+    desc: "Doctor Appointment and Prescription System with Website",
+  },
+  {
+    type: "Healthcare",
+    title: "G-Prescription",
+    desc: "Gynaecology & OBS Consultation Software",
   },
 ];
 
 export const getSoluationsData = async (filt) => {
   return data.filter((cat) => cat.type === filt);
+  
 };
