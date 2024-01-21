@@ -8,6 +8,7 @@ export default function Home() {
       <Banner />
       <OurSolutions />
       <WhoWeAre />
+      
     </div>
   );
 }

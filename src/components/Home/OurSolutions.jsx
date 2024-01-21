@@ -1,4 +1,8 @@
-export default function OurSolutions() {
+import { getSoluationsData } from "@/lib/soluationscard/soluationscarddata";
+
+export default async function OurSolutions() {
+  const data = await getSoluationsData("Business");
+
   return (
     <div className="flex flex-col items-center">
       <div>
@@ -23,8 +27,12 @@ export default function OurSolutions() {
             <h1>icon</h1>
           </div>
           <div className="flex flex-col">
-            <h1>ERR</h1>
-            <p>Business ERP Solution / Product / Shop / Company Management</p>
+            {data.map((d, i) => (
+              <div key={i}>
+                <h1>{d.title}</h1>
+                <p>{d.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
