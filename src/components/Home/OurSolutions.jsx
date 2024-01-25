@@ -3,6 +3,7 @@
 import { getSoluationsData } from "@/lib/soluationscard/soluationscarddata";
 import Image from "next/image";
 import { Suspense, useState } from "react";
+import Title from "../shared/Title";
 
 const first_data = [
   {
@@ -73,7 +74,7 @@ export default function OurSolutions() {
   return (
     <div className="flex flex-col items-center p-10">
       <div>
-        <h1 className="text-4xl m-6">Our Solutions</h1>
+        <Title title={"Our Solutions"} />
       </div>
       <div>
         <p>
@@ -97,10 +98,10 @@ export default function OurSolutions() {
       </div>
       <div>
         <div className="flex flex-row gap-2">
-          <div className="flex flex-col">
+          <div className="flex gap-5 flex-wrap">
             <Suspense fallback={<h1>Loading..........</h1>}>
               {data.map((d, i) => (
-                <div key={i}>
+                <div key={i} className="hover:bg-slate-100">
                   <div>
                     <div>
                       <Image src={d.icon} alt="icon" width={50} height={50} />
