@@ -1,5 +1,3 @@
-"use client";
-
 const Title = ({ title, subtitle }) => {
   return (
     <div className="max-w-screen-sm mx-auto text-center">
