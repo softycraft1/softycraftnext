@@ -96,25 +96,24 @@ export default function OurSolutions() {
           Healthcare
         </button>
       </div>
+
       <div>
-        <div className="flex flex-row gap-2">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <Suspense fallback={<h1>Loading..........</h1>}>
               {data.map((d, i) => (
-                <div key={i} className="hover:bg-slate-100 p-5">
-                  <div className="flex flex-col justify-center items-center">
-                    <div className="flex justify-center items-center">
-                      <Image src={d.icon} alt="icon" width={50} height={50} />
+                <div key={i} className="bg-[#ececec9d] odd:bg-[#4bb4774d] hover:bg-[#85d46d9c] p-8 m-1">
+                  <div className="flex flex-col justify-left items-start gap-1">
+                    <div className="flex justify-center items-center gap-3">
+                      <Image src={d.icon} alt="icon" width={35} height={35} />
                       <h2 className="font-bold">{d.title}</h2>
                     </div>
                     <div>
-                      <p>{d.desc}</p>
+                      <p className="font-normal">{d.desc}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </Suspense>
-          </div>
         </div>
       </div>
     </div>
