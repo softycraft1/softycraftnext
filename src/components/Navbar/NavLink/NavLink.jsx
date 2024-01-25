@@ -3,9 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import style from "./NavLink.module.css";
+import Image from "next/image";
+import { useState } from "react";
+
 
 function NavLink() {
   const pathname = usePathname();
+
+  const [open, setOpen] = useState(false);
+  console.log(open);
 
   const links = [
     {
@@ -41,17 +47,40 @@ function NavLink() {
   ];
   return (
     <div className="font-semibold">
-      {links.map((link) => (
-        <Link
-          key={link.id}
-          href={link.url}
-          className={`${
-            pathname === link.url && style.active
-          } w-8 h-8 p-2 px-4 mx-1 hover:border-2 hover:border-none hover:rounded-[10px] hover:bg-[#f8b90c7a] hover:drop-shadow-md`}
-        >
-          {link.title}
-        </Link>
-      ))}
+      <div className="cursor-pointer lg:hidden" onClick={() => setOpen((prev) => !prev)}>
+        <Image src="/burger-menu.svg" alt="Icon" width={80} height={80}  />
+      </div>
+
+      <div className="hidden lg:block">
+        {links.map((link) => (
+          <Link
+            key={link.id}
+            href={link.url}
+            className={`${pathname === link.url && style.active
+              } w-8 h-8 p-2 px-4 mx-1 hover:border-2 hover:border-none hover:rounded-[10px] hover:bg-[#f8b90c7a] hover:drop-shadow-md`}
+          >
+            {link.title}
+          </Link>
+        ))}
+      </div>
+
+      {
+        open && (
+          <div className="flex flex-col w-[100px]">
+            {links.map((link) => (
+              <Link
+                key={link.id}
+                href={link.url}
+                className={`${pathname === link.url && style.active
+                  } w-8 h-8 p-2 px-4 mx-1 hover:border-2 hover:border-none hover:rounded-[10px] hover:bg-[#f8b90c7a] hover:drop-shadow-md`}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+        )
+      }
+
     </div>
   );
 }
