@@ -98,16 +98,16 @@ export default function OurSolutions() {
       </div>
       <div>
         <div className="flex flex-row gap-2">
-          <div className="flex gap-5 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <Suspense fallback={<h1>Loading..........</h1>}>
               {data.map((d, i) => (
-                <div key={i} className="hover:bg-slate-100">
-                  <div>
-                    <div>
+                <div key={i} className="hover:bg-slate-100 p-5">
+                  <div className="flex flex-col justify-center items-center">
+                    <div className="flex justify-center items-center">
                       <Image src={d.icon} alt="icon" width={50} height={50} />
+                      <h2 className="font-bold">{d.title}</h2>
                     </div>
                     <div>
-                      <h1>{d.title}</h1>
                       <p>{d.desc}</p>
                     </div>
                   </div>
