@@ -8,7 +8,7 @@ export default function WhoWeAre() {
       <div className="basis-1/2 ms-6">
         <div className="flex flex-col gap-5">
           <div>
-            <h1>Who We Are</h1>
+            <h1 className="font-medium text-[#50b138]">Who We Are</h1>
           </div>
           <div>
             <h1 className="text-4xl">We are From Another Space to Automate the World</h1>

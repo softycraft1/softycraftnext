@@ -4,7 +4,7 @@ import NavLink from "./NavLink/NavLink";
 
 const Navbar = () => {
   return (
-    <div className="p-6 px-10 w-full m-auto sticky top-0 bg-[#ffffff7c]">
+    <div className="p-4 px-10 w-full m-auto sticky top-0 bg-[#ffffff7c]">
       <div className="flex justify-between ">
         <div className="">
           <h1 className="text-2xl font-bold">
