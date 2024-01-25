@@ -21,7 +21,7 @@ export default function IndustryWeServe() {
       <div className="grid grid-cols-6">
         {data.map((d, i) => (
           <div key={i}>
-            <div className="flex flex-col items-center m-6 bg-slate-300 p-6 rounded-md">
+            <div className="flex flex-col items-center m-6 bg-slate-300 hover:bg-slate-100 p-6 rounded-md">
               <Image src={d.icon} alt="Icon" width={80} height={80} />
               <h1 className="mt-2">{d.title}</h1>
             </div>
