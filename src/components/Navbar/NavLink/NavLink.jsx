@@ -11,7 +11,6 @@ function NavLink() {
   const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
-  console.log(open);
 
   const links = [
     {

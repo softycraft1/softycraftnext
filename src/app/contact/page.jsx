@@ -7,7 +7,7 @@ export const metadata = {
 };
 const contact = () => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-col lg:flex-row justify-center gap-6 my-12 p-3 w-full ">
       <ContactFrom />
       <ContactSide />
     </div>
