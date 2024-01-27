@@ -1,18 +1,12 @@
 "use client"
 
-import { getProjectData } from "@/lib/projectdata/projectdata";
 import Image from "next/image";
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 
 
 const Projects = () => {
-    const [data, setData] = useState(first_data);
-
-    async function getData() {
-      setData(await getProjectData(type));
-    }
   
-    console.log(getProjectData());
+  
     return (
         <div>
             <div>
