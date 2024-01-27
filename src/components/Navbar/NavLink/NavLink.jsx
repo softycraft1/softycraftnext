@@ -51,7 +51,7 @@ function NavLink() {
           href={link.url}
           className={`${
             pathname === link.url && style.active
-          } w-8 h-8 p-2 px-4 mx-1 hover:bg-[#1a1a1a] hover:text-white duration-200 hover:drop-shadow-md`}
+          } w-8 h-8 p-2 px-4 mx-1 hover:bg-[#2e2e2e] hover:text-white duration-200 hover:drop-shadow-md`}
         >
           {link.title}
         </Link>

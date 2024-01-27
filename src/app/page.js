@@ -3,6 +3,7 @@ import IndustryWeServe from "@/components/Home/IndustryWeServe";
 import OurSolutions from "@/components/Home/OurSolutions";
 import ShareDemand from "@/components/Home/ShareDemand";
 import WhoWeAre from "@/components/Home/WhoWeAre";
+import Projects from "@/components/Projects/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <WhoWeAre />
       <IndustryWeServe />
       <ShareDemand />
+      <Projects/>
     </div>
   );
 }

@@ -65,8 +65,6 @@ const first_data = [
 export default function OurSolutions() {
   const [data, setData] = useState(first_data);
 
-  // console.log(data.icon);
-
   async function getData(type = "Business") {
     setData(await getSoluationsData(type));
   }
@@ -101,7 +99,7 @@ export default function OurSolutions() {
             {data.map((d, i) => (
               <div
                 key={i}
-                className="bg-[#ececec9d] odd:bg-[#4bb4774d] hover:bg-[#85d46d9c] p-8 m-1"
+                className="h-40 bg-[#ececec9d] odd:bg-[#4bb4774d] hover:bg-[#85d46d9c] p-8 m-2 "
               >
                 <div className="flex flex-col justify-left items-start gap-1">
                   <div className="flex justify-center items-center gap-3">
