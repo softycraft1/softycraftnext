@@ -74,13 +74,11 @@ export default function OurSolutions() {
   return (
     <div className="flex flex-col items-center p-10">
       <div>
-        <Title title={"Our Solutions"} />
-      </div>
-      <div>
-        <p>
-          We provide a time-worthy business solution to every type of business.
-          Find out your one and level up your success stairs.
-        </p>
+        <Title
+          title={"Our Solutions"}
+          subtitle={`We provide a time-worthy business solution to every type of business.
+          Find out your one and level up your success stairs.`}
+        />
       </div>
       <div className="flex flex-row gap-5 m-5">
         <button onClick={() => setData(first_data)} className="btn1">
@@ -98,22 +96,25 @@ export default function OurSolutions() {
       </div>
 
       <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <Suspense fallback={<h1>Loading..........</h1>}>
-              {data.map((d, i) => (
-                <div key={i} className="bg-[#ececec9d] odd:bg-[#4bb4774d] hover:bg-[#85d46d9c] p-8 m-1">
-                  <div className="flex flex-col justify-left items-start gap-1">
-                    <div className="flex justify-center items-center gap-3">
-                      <Image src={d.icon} alt="icon" width={35} height={35} />
-                      <h2 className="font-bold">{d.title}</h2>
-                    </div>
-                    <div>
-                      <p className="font-normal">{d.desc}</p>
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <Suspense fallback={<h1>Loading..........</h1>}>
+            {data.map((d, i) => (
+              <div
+                key={i}
+                className="bg-[#ececec9d] odd:bg-[#4bb4774d] hover:bg-[#85d46d9c] p-8 m-1"
+              >
+                <div className="flex flex-col justify-left items-start gap-1">
+                  <div className="flex justify-center items-center gap-3">
+                    <Image src={d.icon} alt="icon" width={35} height={35} />
+                    <h2 className="font-bold">{d.title}</h2>
+                  </div>
+                  <div>
+                    <p className="font-normal">{d.desc}</p>
                   </div>
                 </div>
-              ))}
-            </Suspense>
+              </div>
+            ))}
+          </Suspense>
         </div>
       </div>
     </div>

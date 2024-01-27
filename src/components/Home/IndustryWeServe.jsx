@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Title from "../shared/Title";
 
 const data = [
   { title: "FinTech", icon: "/industry/fintech.png" },
@@ -18,8 +19,10 @@ export default function IndustryWeServe() {
   return (
     <div className="my-10">
       <div className="text-center mb-6">
-        <h2 className="font-extrabold text-4xl m-3">Industry We Serve</h2>
-        <h4>Bridge Your Business with the Virtual World</h4>
+        <Title
+          title={"Industry We Serve"}
+          subtitle={"Bridge Your Business with the Virtual World"}
+        />
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center justify-start gap-4 max-w-[1150px] mx-auto p-4">
         {data.map((d, i) => (
