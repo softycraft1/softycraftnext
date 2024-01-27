@@ -3,9 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import style from "./NavLink.module.css";
+import Image from "next/image";
+import { useState } from "react";
+
 
 function NavLink() {
   const pathname = usePathname();
+
+  const [open, setOpen] = useState(false);
 
   const links = [
     {
@@ -47,7 +52,7 @@ function NavLink() {
           href={link.url}
           className={`${
             pathname === link.url && style.active
-          } py-2 px-4 mx-1 hover:bg-[#1a1a1a] hover:text-white duration-300`}
+          } w-8 h-8 p-2 px-4 mx-1 hover:border-2 hover:border-none hover:rounded-[10px] hover:bg-[#f8b90c7a] hover:drop-shadow-md`}
         >
           {link.title}
         </Link>

@@ -2,26 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.home{
+.home {
     /* min-height: 80vh; */
 }
 
-.btn1{
+.btn1 {
     color: white;
     background-color: #85d46d;
     border-radius: 5px;
     padding: 8px 18px;
 }
-.btn1:focus{
+
+.btn1:focus {
     background-color: #249900;
 }
 
-.btn2{
+.btn2 {
     color: white;
     background-color: #249900;
     border-radius: 5px;
     padding: 10px 20px;
 }
-.btn2:hover{
+
+.btn2:hover {
     background-color: #196602;
+}
+
+.formInput input,
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9c9c9c50;
 }

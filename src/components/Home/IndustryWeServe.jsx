@@ -12,16 +12,19 @@ const data = [
   { title: "Pharmacy", icon: "/industry/pharmacy.png" },
   { title: "Aviation", icon: "/industry/aviation.png" },
   { title: "UI/Ux", icon: "/industry/ui-ux.png" },
-  { title: "Bank Management", icon: "/industry/fintech.png" },
   { title: "Many More", icon: "/industry/more.png" },
 ];
 export default function IndustryWeServe() {
   return (
-    <div>
-      <div className="grid grid-cols-6">
+    <div className="my-10">
+      <div className="text-center mb-6">
+        <h2 className="font-extrabold text-4xl m-3">Industry We Serve</h2>
+        <h4>Bridge Your Business with the Virtual World</h4>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center justify-start gap-4 max-w-[1150px] mx-auto p-4">
         {data.map((d, i) => (
           <div key={i}>
-            <div className="flex flex-col items-center m-6 bg-slate-300 hover:bg-slate-100 duration-100 p-6 rounded-md">
+            <div className="flex flex-col items-center min-w-42  lg:h-[170px] bg-slate-300 hover:bg-slate-100 duration-100 p-6 rounded-md">
               <Image src={d.icon} alt="Icon" width={80} height={80} />
               <h1 className="mt-2">{d.title}</h1>
             </div>
