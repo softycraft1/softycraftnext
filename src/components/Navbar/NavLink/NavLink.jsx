@@ -19,8 +19,8 @@ function NavLink() {
     },
     {
       id: 2,
-      title: "Portfolio",
-      url: "/portfolio",
+      title: "Projects",
+      url: "/projects",
     },
     {
       id: 3,
